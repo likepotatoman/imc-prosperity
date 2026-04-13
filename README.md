@@ -1,4 +1,3 @@
-Understood. Keep it minimal and functional:
 
 ---
 
