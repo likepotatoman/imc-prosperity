@@ -14,4 +14,4 @@ This is going to be a generalization of the previous technique.
 For a given price P, we will take the maximum of orders M we can take so that we max out the ask volume of P - 1. Then placing a bid order of M - 1 at price P will allow us to get M - 1 units at price P - 1.
 I believe this is optimal as at any price, another order with V >= M will trigger a clearance price of P which will reduce our PnL (unless exceptional case where the ask(P-1) is very low suddendly, which is not the case with ember mushroom) and V < M - 1 is losing out on PnL. 
 There are edge cases where dropping V more allows P to go even lower and allowing more PnL but there are none in this case.
-Hence, the best action for us is a bid of P >= 17 and V = 29999 
+Hence, the best action for us is a bid of P >= 17 and V = 19999 
