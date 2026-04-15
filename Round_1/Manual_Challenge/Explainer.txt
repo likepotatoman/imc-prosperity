@@ -1,5 +1,3 @@
-We have 2 goods to trade:
-
 Dryland Flax cf image drylandflax.pdf:
 The true price of this good is 30 as we can resell it later for it. Our goal is therefore to either buy it for less of sell for more.
 Here we notice that there is an ask order for 28 (<30) and this is what we will use to mke our PnL.
@@ -9,15 +7,11 @@ For P >= 30 and V < 10k, PnL = V as the clearance price will be 29 netting us a 
 For P = 29 and V >= 5k, the PnL will be 5k for the same reason as above
 For P = 29 and V < 5k, the PnL will be 2V as the clearance price will be 28 netting us a PnL/unit of 2. The maximum possible PnL using this technique is therefore 9998.
 For P <= 28, we are completely excluded from the trade so no PnL is realized.
-Hence, the best action for us is a bid of P = 30 and V = 9999
+Hence, the best action for us is a bid of P >= 30 and V = 9999
 
 Ember mushroom cf embermushroom.pdf:
 This is going to be a generalization of the previous technique.
 For a given price P, we will take the maximum of orders M we can take so that we max out the ask volume of P - 1. Then placing a bid order of M - 1 at price P will allow us to get M - 1 units at price P - 1.
 I believe this is optimal as at any price, another order with V >= M will trigger a clearance price of P which will reduce our PnL (unless exceptional case where the ask(P-1) is very low suddendly, which is not the case with ember mushroom) and V < M - 1 is losing out on PnL. 
 There are edge cases where dropping V more allows P to go even lower and allowing more PnL but there are none in this case.
-Hence, the best action for us is a bid of P = 17 and V = 29999
- 
-
-To show by exhaustion
-! !!! does dropping it more allow you to drop the clearance price even more??. more PnL?
+Hence, the best action for us is a bid of P >= 17 and V = 29999 
